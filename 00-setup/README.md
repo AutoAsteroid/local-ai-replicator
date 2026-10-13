@@ -55,4 +55,4 @@ ComfyUI/
         └── RealVisXL_V4.0.safetensors
 ```
 
-## 5. Next Step: **[Data Preparation](./01-dataset-prep/README.md)**
+## 5. Next Step: **[Data Preparation](../01-dataset-prep/README.md)**
