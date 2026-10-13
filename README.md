@@ -27,7 +27,7 @@ Follow the guide sequentially by navigating into each step's folder:
 
 | Step | Section | Description |
 | :---: | :--- | :--- |
-| **00** | [**00-setup**](./00-setup/README.md) | Install Python, `ai-toolkit`, and `ComfyUI`. Downloads to recommended base checkpoints. |
+| **00** | [**00-setup**](./00-setup/README.md) | Install Python, `ai-toolkit`, and `ComfyUI`. Downloads to recommended base models. |
 | **01** | [**01-dataset-prep**](./01-dataset-prep/README.md) | Image curation guide and automated data cleaning and captioning scripts. |
 | **02** | [**02-training**](./02-training/README.md) | Annotated `ai-toolkit` YAML configurations and execution instructions. |
 | **03** | [**03-generating**](./03-generating/README.md) | Loading your LoRA into `ComfyUI`, setting weights, and running generation workflows. |
@@ -38,11 +38,11 @@ Follow the guide sequentially by navigating into each step's folder:
 
 Training on a dedicated NVIDIA GPU is roughly **50x to 100x faster** than CPU execution. While CPU only mode is supported, running a full LoRA training job without CUDA hardware is generally impractical for standard workflows.
 
-| Hardware Level | GPU VRAM | System RAM | Typical Training Time | Usability |
+| Hardware | GPU VRAM | System RAM | Training Time | Usability |
 | :--- | :--- | :--- | :--- | :--- |
-| **Recommended** | 12GB+ VRAM (NVIDIA) | 32GB+ RAM | **~15 – 30 minutes** | Fast & Seamless |
-| **Minimum** | 8GB VRAM (NVIDIA) | 16GB RAM | **~45 – 90 minutes** | Functional (FP8 / `--lowvram`) |
-| **CPU Only** | None: Multi-Core CPU | 32GB+ RAM | **24 – 72+ hours** | Extremely Slow (Experimental) |
+| **Recommended** | 12GB VRAM (NVIDIA) | 32GB+ RAM | **~15 – 30 minutes** | Fast & Seamless |
+| **Minimum** | 8GB VRAM (NVIDIA) | 16GB RAM | **~45 – 90 minutes** | Functional `--lowvram` |
+| **CPU Only** | Multi-Core CPU | 32GB+ RAM | **24 – 72+ hours** | Extremely Slow |
 
 --- 
 
@@ -50,7 +50,7 @@ Training on a dedicated NVIDIA GPU is roughly **50x to 100x faster** than CPU ex
 
 `local-ai-replicator` is an open-source tool provided for educational, research, and creative use.
 
-* **Consent & Likeness:** Only train models using your own datasets or subject matter you have explicit permission to replicate.
+* **Consent & Likeness:** Only train models using your own datasets or subjects you have explicit permission to replicate.
 * **Model Licenses:** Adhere to the terms and licensing of any underlying base checkpoints used.
 * **Liability:** The author assumes no responsibility or liability for content generated with these local tools.
 
