@@ -44,3 +44,15 @@ To create high-fidelity images, you need a **base model checkpoint** (`.safetens
 ### Why I Recommend CyberRealismXL
 
 Unlike corporate base models that are heavily safety-filtered and stylized, **CyberRealismXL** was fine-tuned on diverse, real-world photo datasets without artificial content restrictions. Because it retains full uncensored dataset awareness, it possesses a vastly deeper understanding of **human anatomy, natural body proportions, skin textures, and raw photographic lighting**. This makes it significantly more capable when learning custom subjects and generating realistic human figures without artificial censorship artifacts.
+
+```text
+ComfyUI/
+└── models/
+    └── checkpoints/
+        ├── CyberRealisticXLPlay_V10.0_FP16.safetensors
+        ├── CyberRealisticXLPlay_V10.0_FP32.safetensors
+        ├── Juggernaut-XL_v9_RunDiffusionPhoto_v2.safetensors
+        └── RealVisXL_V4.0.safetensors
+```
+
+## 5. Next Step: **[Data Preparation](./01-dataset-prep/README.md)**
