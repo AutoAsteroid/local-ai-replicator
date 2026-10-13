@@ -10,7 +10,7 @@ Whether you are building a digital double of a person or capturing unique real-w
 
 ## What is a LoRA?
 
-A **LoRA** (`Low-Rank Adaptation`) is a small, lightweight "patch file" for a larger AI model. Instead of spending weeks retraining a massive multi-gigabyte base model from scratch, we take a free, photorealistic base model (like `CyberRealismXL`) and fine-tune a small layer of weights using a curated set of photos. As a result, you get a compact (~100 MB - 300 MB) custom file that teaches the base model how to recreate your specific subject with near-1:1 visual precision.
+A **LoRA** (`Low-Rank Adaptation`) is a small, lightweight "patch file" for a larger AI model. Instead of spending weeks retraining a massive multi-gigabyte base model from scratch, we take a free, photorealistic base model (like `CyberRealismXL`) and fine-tune a small layer of weights using a curated set of photos. As a result, you get a compact custom file that teaches the base model how to recreate your specific subject with near-1:1 visual precision.
 
 ---
 
@@ -50,7 +50,7 @@ Training on a dedicated NVIDIA GPU is roughly **50x to 100x faster** than CPU ex
 
 `local-ai-replicator` is an open-source tool provided for educational, research, and creative use.
 
-* **Consent & Likeness:** Only train models using your own datasets or subjects you have explicit permission to replicate.
+* **Consent:** Only train models using your own datasets or subjects you have explicit permission to replicate.
 * **Model Licenses:** Adhere to the terms and licensing of any underlying base checkpoints used.
 * **Liability:** The author assumes no responsibility or liability for content generated with these local tools.
 
