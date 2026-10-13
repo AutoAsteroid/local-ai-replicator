@@ -1,6 +1,6 @@
 # local-ai-replicator
 
-### **A 100% local, nontechnical friendly step-by-step pipeline combining `ComfyUI` and `ai-toolkit` to train and generate ultra-realistic custom LoRAs of real-world subjects.**
+### **A 100% local, beginner-friendly step-by-step pipeline combining `ComfyUI` and `ai-toolkit` to train and generate ultra-realistic custom LoRAs of real-world subjects.**
 
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![ComfyUI](https://img.shields.io/badge/ComfyUI-Workflow-orange.svg)](https://github.com/comfyanonymous/ComfyUI)
