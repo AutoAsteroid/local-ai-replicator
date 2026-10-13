@@ -21,7 +21,6 @@ A **LoRA** (`Low-Rank Adaptation`) is a small, lightweight "patch file" for a la
 - **Zero Restrictions:** Native support for unrestricted local base models, bypassing generic cloud service content filters.
 - **Workflow Presets:** Includes ready-to-use `ComfyUI` and `ai-toolkit` templates for instant easy drag-and-drop use.
 
-
 ## Instruction Overview & Guide
 
 Follow the guide sequentially by navigating into each step's folder:
@@ -37,14 +36,13 @@ Follow the guide sequentially by navigating into each step's folder:
 
 ## Recommended System Specs & Performance
 
+Training on a dedicated NVIDIA GPU is roughly **50x to 100x faster** than CPU execution. While CPU only mode is supported, running a full LoRA training job without CUDA hardware is generally impractical for standard workflows.
+
 | Hardware Level | GPU VRAM / System RAM | Typical Training Time | Usability |
 | :--- | :--- | :--- | :--- |
 | **Recommended** | NVIDIA GPU (12GB+ VRAM) + 32GB RAM | **~15 – 30 minutes** | Fast & Seamless |
 | **Minimum** | NVIDIA GPU (8GB VRAM) + 16GB RAM | **~45 – 90 minutes** | Functional (FP8 / `--lowvram`) |
 | **CPU Only** | Multi-Core CPU + 32GB+ RAM | **24 – 72+ hours** | Extremely Slow (Experimental) |
-
-> [!NOTE]
-> Training on a dedicated NVIDIA GPU is roughly **50x to 100x faster** than CPU execution. While CPU only mode is supported, running a full LoRA training job without CUDA hardware is generally impractical for standard workflows.
 
 --- 
 
