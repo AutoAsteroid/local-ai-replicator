@@ -21,6 +21,18 @@ A **LoRA** (`Low-Rank Adaptation`) is a small, lightweight "patch file" for a la
 - **Zero Restrictions:** Native support for unrestricted local base models, bypassing generic cloud service content filters.
 - **Workflow Presets:** Includes ready-to-use `ComfyUI` and `ai-toolkit` templates for instant easy drag-and-drop use.
 
+
+## Instruction Overview & Guide
+
+Follow the guide sequentially by navigating into each step's folder:
+
+| Step | Section | Description |
+| :---: | :--- | :--- |
+| **00** | [**00-setup**](./00-setup/README.md) | Install Python, `ai-toolkit`, and `ComfyUI`. Downloads to recommended base checkpoints. |
+| **01** | [**01-dataset-prep**](./01-dataset-prep/README.md) | Image curation guide and automated data cleaning and captioning scripts. |
+| **02** | [**02-training**](./02-training/README.md) | Annotated `ai-toolkit` YAML configurations and execution instructions. |
+| **03** | [**03-generating**](./03-generating/README.md) | Loading your LoRA into `ComfyUI`, setting weights, and running generation workflows. |
+
 ---
 
 ## License
