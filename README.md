@@ -6,7 +6,13 @@
 [![ComfyUI](https://img.shields.io/badge/ComfyUI-Workflow-orange.svg)](https://github.com/comfyanonymous/ComfyUI)
 [![ai-toolkit](https://img.shields.io/badge/ai--toolkit-ostris-purple.svg)](https://github.com/ostris/ai-toolkit)
 
-**`local-ai-replicator`** provides a complete, beginner-friendly framework for creating high-fidelity LoRAs (Low-Rank Adaptations) on consumer hardware. Whether you are building a digital double of a person or capturing unique real-world objects, this repository guides you through every step with zero cloud subscriptions, zero API throttling, and full privacy.
+Whether you are building a digital double of a person or capturing unique real-world objects, this repository guides you through every step creating your own high-fidelity LoRAs on your consumer hardware with full privacy, entirely for free.
+
+---
+
+## What is a LoRA?
+
+A **LoRA** (`Low-Rank Adaptation`) is a small, lightweight "patch file" for a larger AI model. Instead of spending weeks retraining a massive multi-gigabyte base model from scratch, we take a free, photorealistic base model (like `CyberRealismXL`) and fine-tune a small layer of weights using a curated set of photos. As a result, you get a compact (~100 MB - 300 MB) custom file that teaches the base model how to recreate your specific subject with near-1:1 visual precision.
 
 ---
 
