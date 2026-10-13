@@ -35,7 +35,7 @@ Follow the guide sequentially by navigating into each step's folder:
 
 ---
 
-## 💻 Recommended System Specs & Performance
+## Recommended System Specs & Performance
 
 | Hardware Level | GPU VRAM / System RAM | Typical Training Time | Usability |
 | :--- | :--- | :--- | :--- |
@@ -45,6 +45,16 @@ Follow the guide sequentially by navigating into each step's folder:
 
 > [!NOTE]
 > Training on a dedicated NVIDIA GPU is roughly **50x to 100x faster** than CPU execution. While CPU only mode is supported, running a full LoRA training job without CUDA hardware is generally impractical for standard workflows.
+
+--- 
+
+## Responsible AI & Ethical Usage
+
+`local-ai-replicator` is an open-source tool provided for educational, research, and creative use.
+
+* **Consent & Likeness:** Only train models using your own datasets or subject matter you have explicit permission to replicate.
+* **Model Licenses:** Adhere to the terms and licensing of any underlying base checkpoints used.
+* **Liability:** The author assumes no responsibility or liability for content generated with these local tools.
 
 ---
 
