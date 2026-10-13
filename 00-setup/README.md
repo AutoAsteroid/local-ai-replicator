@@ -27,3 +27,20 @@ Before running `ai-toolkit`, ensure **Python 3.12** is installed and properly co
 1. Go to the official [ComfyUI](https://github.com/comfyanonymous/ComfyUI/releases) GitHub releases page.
 2. Download the **Portable Version** zip file for your system (e.g., `ComfyUI_windows_portable...`).
 3. Extract the `.7z` or `.zip` file into any convenient folder on your PC (e.g., `C:\ComfyUI\`).
+
+## 4. Downloading Base Models
+
+To create high-fidelity images, you need a **base model checkpoint** (`.safetensors` file). Think of the base model as the "foundation" or "brain" that understands art styles, lighting, and real-world concepts, while your trained LoRA acts as a specialized patch or add-on layered on top.
+
+### Download one (or more) of the following `.safetensors` base checkpoints:
+
+| Model Name | Best Used For | Download Link |
+| :--- | :--- | :--- |
+| **CyberRealismXL** *(Default)* | Photorealistic portraits, natural skin texture, realistic lighting & subject accuracy | [HuggingFace](https://huggingface.co/cyberdelia/CyberRealisticXL) / [Civitai](https://civitai.com/models/129666/cyberrealism-xl) |
+| **RealVisXL V4.0 / V5.0** | Hyper-detailed skin pores, sharp facial features, photographic portraits | [HuggingFace](https://huggingface.co/SG161222/RealVisXL_V4.0) / [Civitai](https://civitai.com/models/139562/realvisxl) |
+| **Juggernaut XL v9** | Cinematic scenes, environments, dynamic lighting & versatile realism | [HuggingFace](https://huggingface.co/RunDiffusion/Juggernaut-XL-v9) / [Civitai](https://civitai.com/models/133005/juggernaut-xl) |
+| **SDXL Base 1.0** | Official vanilla base model for broad, general-purpose training | [HuggingFace](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/blob/main/sd_xl_base_1.0.safetensors) |
+
+### Why I Recommend CyberRealismXL
+
+Unlike corporate base models that are heavily safety-filtered and stylized, **CyberRealismXL** was fine-tuned on diverse, real-world photo datasets without artificial content restrictions. Because it retains full uncensored dataset awareness, it possesses a vastly deeper understanding of **human anatomy, natural body proportions, skin textures, and raw photographic lighting**. This makes it significantly more capable when learning custom subjects and generating realistic human figures without artificial censorship artifacts.
