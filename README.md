@@ -1,4 +1,4 @@
-# Local AI Replicator
+# local-ai-replicator
 
 ### **A 100% local, nontechnical friendly step-by-step pipeline combining `ComfyUI` and `ai-toolkit` to train and generate ultra-realistic custom LoRAs of real-world subjects.**
 
@@ -6,7 +6,7 @@
 [![ComfyUI](https://img.shields.io/badge/ComfyUI-Workflow-orange.svg)](https://github.com/comfyanonymous/ComfyUI)
 [![ai-toolkit](https://img.shields.io/badge/ai--toolkit-ostris-purple.svg)](https://github.com/ostris/ai-toolkit)
 
-Whether you are building a digital double of a person or capturing unique real-world objects, this repository guides you through every step creating your own high-fidelity LoRAs on your consumer hardware with full privacy, entirely for free.
+Whether you are building a digital double of a person or capturing unique real-world objects, this repository guides you through every step creating your own high-fidelity LoRAs on your consumer hardware with full privacy, for free.
 
 ## What is a LoRA?
 
@@ -16,10 +16,10 @@ A **LoRA** (`Low-Rank Adaptation`) is a small, lightweight "patch file" for a la
 
 ## Key Features & Advantages
 
-- **100% Local & Private:** Runs entirely on your personal hardware. Your images and generated outputs never leave your computer.
-- **Photorealistic Accuracy:** Pre-configured hyperparameters and guides designed to achieve near-1:1 subject replication.
-- **Zero Restrictions:** Native support for unrestricted local base models, bypassing generic cloud service content filters.
-- **Workflow Presets:** Includes ready-to-use `ComfyUI` and `ai-toolkit` templates for instant easy drag-and-drop use.
+- **100% Local & Private:** Runs entirely on your hardware. Your images and generations never leave your PC.
+- **Photorealistic Accuracy:** Pre-configured hyperparameters designed to achieve near-1:1 subject replication.
+- **Zero Restrictions:** Native support for unrestricted base models, bypassing cloud service content filters.
+- **Workflow Presets:** Includes `ComfyUI` and `ai-toolkit` templates for instant easy drag-and-drop use.
 
 ## Instruction Overview & Guide
 
@@ -38,11 +38,11 @@ Follow the guide sequentially by navigating into each step's folder:
 
 Training on a dedicated NVIDIA GPU is roughly **50x to 100x faster** than CPU execution. While CPU only mode is supported, running a full LoRA training job without CUDA hardware is generally impractical for standard workflows.
 
-| Hardware Level | GPU VRAM / System RAM | Typical Training Time | Usability |
-| :--- | :--- | :--- | :--- |
-| **Recommended** | NVIDIA GPU (12GB+ VRAM) + 32GB RAM | **~15 – 30 minutes** | Fast & Seamless |
-| **Minimum** | NVIDIA GPU (8GB VRAM) + 16GB RAM | **~45 – 90 minutes** | Functional (FP8 / `--lowvram`) |
-| **CPU Only** | Multi-Core CPU + 32GB+ RAM | **24 – 72+ hours** | Extremely Slow (Experimental) |
+| Hardware Level | GPU VRAM | System RAM | Typical Training Time | Usability |
+| :--- | :--- | :--- | :--- | :--- |
+| **Recommended** | 12GB+ VRAM (NVIDIA) | 32GB+ RAM | **~15 – 30 minutes** | Fast & Seamless |
+| **Minimum** | 8GB VRAM (NVIDIA) | 16GB RAM | **~45 – 90 minutes** | Functional (FP8 / `--lowvram`) |
+| **CPU Only** | None: Multi-Core CPU | 32GB+ RAM | **24 – 72+ hours** | Extremely Slow (Experimental) |
 
 --- 
 
