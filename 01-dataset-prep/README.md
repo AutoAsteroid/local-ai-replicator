@@ -70,7 +70,7 @@ ComfyUI_windows_portable/
 
 > The workflow is set to use **`wd-v1-4-convnextv2-tagger-v2`** by default. The very first time you run the workflow, ComfyUI will automatically download this model from HuggingFace. If you'd prefer a different model, select any in the `WD14 Tagger` model dropdown.
 
-## Step 4: Cleanup & Quality Control
+## 4. Cleanup & Quality Control
 
 1. Once ComfyUI finishes running through your queue, your `.txt` caption files will be ready inside ComfyUI's output directory found here:
 ```text
