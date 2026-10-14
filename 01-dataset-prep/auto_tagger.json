@@ -1,0 +1,506 @@
+{
+  "id": "abf38b85-a002-4a2d-ab44-eda250119c8c",
+  "revision": 0,
+  "last_node_id": 34,
+  "last_link_id": 51,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "WD14Tagger|pysssss",
+      "pos": [
+        33.65588482254656,
+        91.13630491410848
+      ],
+      "size": [
+        293.3987010600249,
+        419.9164055042787
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            43
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-wd14-tagger",
+        "ver": "1.0.1",
+        "Node name for S&R": "WD14Tagger|pysssss"
+      },
+      "widgets_values": [
+        "wd-v1-4-convnextv2-tagger-v2",
+        0.35,
+        0.85,
+        true,
+        false,
+        ""
+      ],
+      "widgets_values_named": {
+        "model": "wd-v1-4-convnextv2-tagger-v2",
+        "threshold": 0.35,
+        "character_threshold": 0.85,
+        "replace_underscore": true,
+        "trailing_comma": false,
+        "exclude_tags": ""
+      }
+    },
+    {
+      "id": 13,
+      "type": "Load Image Batch",
+      "pos": [
+        -300.4842487611814,
+        91.21678737468275
+      ],
+      "size": [
+        298.22893438614835,
+        270
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "path",
+          "type": "STRING",
+          "widget": {
+            "name": "path"
+          },
+          "link": 51
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            7,
+            9
+          ]
+        },
+        {
+          "name": "filename_text",
+          "type": "STRING",
+          "links": [
+            46
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "was-ns",
+        "ver": "3.0.1",
+        "Node name for S&R": "Load Image Batch"
+      },
+      "widgets_values": [
+        "incremental_image",
+        0,
+        "fixed",
+        0,
+        "0",
+        "",
+        "*",
+        "false",
+        "false"
+      ],
+      "widgets_values_named": {
+        "mode": "incremental_image",
+        "seed": 0,
+        "control_after_generate": "fixed",
+        "index": 0,
+        "label": "0",
+        "path": "",
+        "pattern": "*",
+        "allow_RGBA_output": "false",
+        "filename_text_extension": "false"
+      }
+    },
+    {
+      "id": 16,
+      "type": "PreviewImage",
+      "pos": [
+        359.4733220827578,
+        336.32140244511214
+      ],
+      "size": [
+        312.1024362058654,
+        272.64089979932936
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.39.2",
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 18,
+      "type": "Save Text File",
+      "pos": [
+        357.27122806406317,
+        91.18599902052331
+      ],
+      "size": [
+        314.15234375,
+        202
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 40
+        },
+        {
+          "name": "path",
+          "type": "STRING",
+          "widget": {
+            "name": "path"
+          },
+          "link": 50
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 46
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "was-ns",
+        "ver": "3.0.1",
+        "Node name for S&R": "Save Text File"
+      },
+      "widgets_values": [
+        "./ComfyUI/output/",
+        "",
+        "",
+        0,
+        ".txt",
+        "utf-8",
+        ""
+      ],
+      "widgets_values_named": {
+        "path": "./ComfyUI/output/",
+        "filename_prefix": "",
+        "filename_delimiter": "",
+        "filename_number_padding": 0,
+        "file_extension": ".txt",
+        "encoding": "utf-8",
+        "filename_suffix": ""
+      }
+    },
+    {
+      "id": 19,
+      "type": "PrimitiveString",
+      "pos": [
+        -300.0423957154613,
+        447.98427673504614
+      ],
+      "size": [
+        300.2737497719651,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            51
+          ]
+        }
+      ],
+      "title": "Folder Path",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.39.2",
+        "Node name for S&R": "PrimitiveString"
+      },
+      "widgets_values": [
+        "DATA_FOLDER_PATH"
+      ],
+      "widgets_values_named": {
+        "value": "DATA_FOLDER_PATH"
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 20,
+      "type": "PrimitiveString",
+      "pos": [
+        -299.7121413166154,
+        551.8069939792765
+      ],
+      "size": [
+        299.8939999383818,
+        58
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            42,
+            49
+          ]
+        }
+      ],
+      "title": "Trigger Word",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.39.2",
+        "Node name for S&R": "PrimitiveString"
+      },
+      "widgets_values": [
+        "TRIGGER_WORD"
+      ],
+      "widgets_values_named": {
+        "value": "TRIGGER_WORD"
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 30,
+      "type": "StringConcatenate",
+      "pos": [
+        97.5837731328033,
+        557.2608245240937
+      ],
+      "size": [
+        210,
+        166
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 42
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 43
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            40
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.39.2",
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        "",
+        ", "
+      ],
+      "widgets_values_named": {
+        "string_a": "",
+        "string_b": "",
+        "delimiter": ", "
+      }
+    },
+    {
+      "id": 34,
+      "type": "StringConcatenate",
+      "pos": [
+        97.24472210618853,
+        609.8814260077087
+      ],
+      "size": [
+        210,
+        166
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 49
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            50
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.39.2",
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "./ComfyUI/output/",
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "string_a": "./ComfyUI/output/",
+        "string_b": "",
+        "delimiter": ""
+      }
+    }
+  ],
+  "links": [
+    [
+      7,
+      13,
+      0,
+      1,
+      0,
+      "IMAGE"
+    ],
+    [
+      9,
+      13,
+      0,
+      16,
+      0,
+      "IMAGE"
+    ],
+    [
+      40,
+      30,
+      0,
+      18,
+      0,
+      "STRING"
+    ],
+    [
+      42,
+      20,
+      0,
+      30,
+      0,
+      "STRING"
+    ],
+    [
+      43,
+      1,
+      0,
+      30,
+      1,
+      "STRING"
+    ],
+    [
+      46,
+      13,
+      1,
+      18,
+      2,
+      "STRING"
+    ],
+    [
+      49,
+      20,
+      0,
+      34,
+      0,
+      "STRING"
+    ],
+    [
+      50,
+      34,
+      0,
+      18,
+      1,
+      "STRING"
+    ],
+    [
+      51,
+      19,
+      0,
+      13,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9229599817706458,
+      "offset": [
+        1156.5201927161345,
+        274.5670157102853
+      ]
+    },
+    "frontendVersion": "1.53.10",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
