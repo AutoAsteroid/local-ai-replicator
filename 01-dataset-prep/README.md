@@ -24,8 +24,38 @@ It will recursively crawl your input folder for images, find the highest resolut
 4. The script will automatically process your photos getting us closer to ready for training!
 
 You can also run the script directly in terminal.
-The `-t` or `-threshold` setting controls how strict the duplicate checker is. 6 catches near-visual duplicates and burst shots while 0 catches exact file-hash duplicates.
+The `-t` or `--threshold` setting controls how strict the duplicate checker is. 6 catches near-visual duplicates and burst shots while 0 catches exact file-hash duplicates.
 
 ```text
 python preprocess.py -i "C:\input_path" -o "C:\output_path" -t 6
 ```
+
+## 3. Setting Up the Auto-Tagger in ComfyUI
+
+For the LoRA to understand the context of each of your images during training, it needs a description of tags, otherwise known as a caption.
+To automatically generate `.txt` caption files for your images, we'll use ComfyUI alongside the popular **WD14 Tagger** custom node.
+Because vanilla ComfyUI doesn't come with custom node managers out of the box, we will install **ComfyUI-Manager** first using a simple drag-and-drop method.
+
+### Step 1: Install ComfyUI-Manager
+
+1. Completely close ComfyUI if it is currently running.
+2. Go to the official [ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager) GitHub Repository.
+3. Click the green **`<> Code`** button at the top right, then select **Download ZIP**.
+4. Extract the downloaded ZIP file. You will get a folder named `ComfyUI-Manager-main`.
+5. Rename that extracted folder so it is strictly named: `ComfyUI-Manager`
+6. Move that folder directly into your ComfyUI custom nodes directory, located here:
+```text
+ComfyUI_windows_portable/
+└── ComfyUI/
+    └── custom_nodes/
+        └── ComfyUI-Manager/
+```
+7. Launch ComfyUI. You will now see a new **Manager** button on your floating menu panel!
+
+### Step 2: Install the WD14 Tagger Node
+
+1. Open ComfyUI and click the blue **Manager** button on the top right-hand menu.
+2. Click on **Custom Nodes Manager** (or *Install via Manager*).
+3. Type `WD14` into the search bar.
+4. Locate **ComfyUI-WD14-Tagger** and click **Install**.
+5. After installing, click the Red **Restart** button on the bottom left when prompted.
