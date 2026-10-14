@@ -32,13 +32,13 @@ python preprocess.py -i "C:\input_path" -o "C:\output_path" -t 6
 
 ## 3. Setting Up the Auto-Tagger in ComfyUI
 
-For the LoRA to understand the context of each of your images during training, it needs a description of tags, otherwise known as a caption.
+For the LoRA to understand the context of each of your images during training, it needs a list of correlated tags.
 To automatically generate `.txt` caption files for your images, we'll use ComfyUI alongside the popular **WD14 Tagger** custom node.
 Because vanilla ComfyUI doesn't come with custom node managers out of the box, we will install **ComfyUI-Manager** first using a simple drag-and-drop method.
 
 ### Step 1: Install ComfyUI-Manager
 
-1. Completely close ComfyUI if it is currently running.
+1. Completely close out of  ComfyUI if it is currently running.
 2. Go to the official [ComfyUI-Manager](https://github.com/ltdrdata/ComfyUI-Manager) GitHub Repository.
 3. Click the green **`<> Code`** button at the top right, then select **Download ZIP**.
 4. Extract the downloaded ZIP file. You will get a folder named `ComfyUI-Manager-main`.
@@ -52,10 +52,20 @@ ComfyUI_windows_portable/
 ```
 7. Launch ComfyUI. You will now see a new **Manager** button on your floating menu panel!
 
-### Step 2: Install the WD14 Tagger Node
+### Step 2: Install Required Custom Nodes
 
-1. Open ComfyUI and click the blue **Manager** button on the top right-hand menu.
-2. Click on **Custom Nodes Manager** (or *Install via Manager*).
-3. Type `WD14` into the search bar.
-4. Locate **ComfyUI-WD14-Tagger** and click **Install**.
-5. After installing, click the Red **Restart** button on the bottom left when prompted.
+1. Drag and drop the provided `auto_tagger.json` file it directly into the ComfyUI browser window.
+2. You may see red outlined nodes. Click the **Manager** button and **Install Missing Custom Nodes**.
+4. ComfyUI Manager will find and list the missing custom nodes, such as `comfyui-wd14-tagger` and `was-ns`.
+5. Click **Install All** (or **Install** next to each package).
+6. After installion completes, click the red **Restart** button on the bottom left when prompted.
+
+### Step 3: Captioning
+
+1. In the blue node labeled **Folder Path**, paste the absolute path to your dataset. For example: `C:\Users\YourName\Documents\Dataset`. Make sure to not have any quotation marks `"` wrapped around it.
+2. In the second blue node labeled **Trigger Word**, put a unique identifier that describes your dataset best. For example, `jordan_car` is better than `car` because the base model can bleed in what it already knows about `car`.
+3. Near the top right **Run** button, change the **Queue/Batch Count** to match the exact number of images in your dataset folder.
+4. Click **Run**. ComfyUI will generate `.txt` captions for each of your images. If you notice some words you don't like being chosen, you can add them to the `exclude_tags` parameter in `WD14 Tagger`.
+5. If you notice your `Load Image Batch` picking up where it last left off rather than starting from your first file, increase the `label` parameter to reset the counter to 0.
+
+> The workflow is set to use **`wd-v1-4-convnextv2-tagger-v2`** by default. The very first time you run the workflow, ComfyUI will automatically download this model from HuggingFace. If you'd prefer a different model, select any in the `WD14 Tagger` model dropdown.
