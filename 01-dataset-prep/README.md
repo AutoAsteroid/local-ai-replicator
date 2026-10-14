@@ -69,3 +69,20 @@ ComfyUI_windows_portable/
 5. If you notice your `Load Image Batch` picking up where it last left off rather than starting from your first file, increase the `label` parameter to reset the counter to 0.
 
 > The workflow is set to use **`wd-v1-4-convnextv2-tagger-v2`** by default. The very first time you run the workflow, ComfyUI will automatically download this model from HuggingFace. If you'd prefer a different model, select any in the `WD14 Tagger` model dropdown.
+
+## Step 4: Cleanup & Quality Control
+
+1. Once ComfyUI finishes running through your queue, your `.txt` caption files will be ready inside ComfyUI's output directory found here:
+```text
+ComfyUI_windows_portable/
+└── ComfyUI/
+    └── output/
+        └── [TRIGGER_WORD]/
+            ├── 001.txt
+            ├── 002.txt
+            └── ...
+```
+2. Copy or move all the generated `.txt` files and paste them directly into your main dataset folder alongside your original image files. Every image should now have a corresponding `.txt` file with the exact same name (e.g., `001.png` and `001.txt`).
+3. In every text file you should see your trigger word followed by a lot of image descriptors. You can adjust these as you'd like.
+
+## 5. Next Step: **[Training](../02-training/README.md)**
